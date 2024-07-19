@@ -1,37 +1,4 @@
 <template>
-    <div class="container text-dark bg-white my-5 pb-md-5">
-        <div class="row">
-            <div class="col mt-5 mt-md-0">
-                <div class="btn btn-outline-dark border-3 p-3 d-flex flex-column justify-content-center align-items-center"
-                    style="border-color: #FFCE56 !important;">
-                    <div class="rounded border   border-3 bg-dark"
-                        style="width:60px;height: 60px; margin-top: -50px;border-color: #FFCE56 !important;">
-                        <img src="/img/logo.svg" alt="" style="width: 100%;height: 100%;filter: invert(1);">
-                    </div>
-                    <p class="fw-bold m-0 d-flex justify-content-center align-items-center fs-4">
-                        <AutoCounter :data="50"></AutoCounter>
-                    </p>
-                    <small class="smaller fw-bold">Fameset</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container text-dark bg-white">
-        <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <div v-for="(item, index) in fav" :key="index" class="d-flex align-items-center mb-5">
-                <div class="p-3 d-flex flex-column justify-content-center align-items-center"
-                    style="border-color: #FFCE56 !important;">
-                    <i :class="item.iconClass" class="text-dark"></i>
-                    <p class="fw-bold fs-4">
-                        <AutoCounter :data="item.data"></AutoCounter>
-                    </p>
-                    <small class="smaller fw-bold">{{ item.label }}</small>
-                </div>
-                <div v-if="index < fav.length - 1" class="vr mx-4"></div>
-            </div>
-        </div>
-    </div>
 
     <div class="container text-dark bg-white my-5 pt-md-5">
         <div class="row g-md-5 g-2">
@@ -121,33 +88,7 @@ export default {
                     component: 'RewardSection'
                 }
             ],
-            fav: [
-                {
-                    iconClass: 'bi bi-heart fs-1',
-                    iconColor: '#BCDFFB',
-                    data: 10,
-                    label: 'Likes',
 
-                },
-                {
-                    iconClass: 'bi bi-eye fs-1',
-                    iconColor: '#C9E7CA',
-                    data: 10,
-                    label: 'Views'
-                }, 
-                {
-                    iconClass: 'bi bi-coin fs-1',
-                    iconColor: '#FFB2B2',
-                    data: 50,
-                    label: 'Repo'
-                },
-                {
-                    iconClass: 'bi bi-people fs-1',
-                    iconColor: '#FFB2B2',
-                    data: 50,
-                    label: 'Uers'
-                },
-            ]
         }
     }
 }

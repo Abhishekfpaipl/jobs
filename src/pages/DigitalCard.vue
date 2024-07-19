@@ -4,7 +4,6 @@
     <ProfileSection :user="user"/> 
     <InfoSection />
     <InformationSection />
-
   </div>
 </template>
 
